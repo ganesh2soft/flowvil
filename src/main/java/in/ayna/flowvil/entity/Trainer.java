@@ -17,5 +17,7 @@ public class Trainer {
 	private String trainerEmail;
 	private String trainerPhone;
 	private String trainerLocation;
+	private int costperday;
+	
 	
 }
