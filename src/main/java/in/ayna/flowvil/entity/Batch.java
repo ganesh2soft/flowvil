@@ -1,5 +1,7 @@
 package in.ayna.flowvil.entity;
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,12 +14,17 @@ public class Batch {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long batchId;
-
+	//private  Followupid //foreign key
+	private String batchVenue;
+	private String trainingMode;
+	private int batchDuration; //No of days
+	private Date batchStartDate;
+	private Date batchEndDate;
+    private String batchName;
+    private String trainingFor;
+    private String locationContactPerson;
+    private String locationContactPhone;
+    private String technologies;
 	
 	
 }
-
-//Trainers Location	Training Name	Training For	Training Location	First Vendor	Call Scheduled Date	Call Scheduled time	Client Evaluation Cleared	If NO? Point given by cient
-//SlNo	Batchid	Trainer	TrainerContact	Email	Trainers Location	Training Name	Training For	Timings	Training Mode	Training Venue	Direct Vendor	Start Date	End Date	Description	No.of Days	"Rate per day 
-//Commited"	Total	Payment Terms	Status of Payment	"Status of Payment Received 
-//from Vendor to Aynavil"	Status	Contact Person 	Client Quoted / day	Trainer Charge/ day	Aynavil Profit /day	No.of days 	Trainer charges	Net 	TDS from vendor end	Aynavil will get	Final Profit

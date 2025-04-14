@@ -1,6 +1,8 @@
 package in.ayna.flowvil.entity;
 
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,22 +17,11 @@ public class Followup {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long followupId;
-	
+	private Date call_Scheduled_Date_Time;
 	@ManyToOne
 	@JoinColumn(name = "reqcode", referencedColumnName = "requirementId")
 	private Requirement requirement; 
+	private Boolean client_Evaluation_Cleared;
+	private String reason;
 	
-	/*
-	@Column(nullable=false)
-	private String vendorName;
-	private String vendorContactPerson;
-	private String vendorPhone;
-	private String clientName;
-	private int durationofDays;
-	@Column(nullable=false)
-	private String batchMode;
-	private Date validTill;
-	private int budgetperDay;
-	private String subject;
-    */
 }

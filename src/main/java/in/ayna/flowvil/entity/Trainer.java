@@ -18,6 +18,6 @@ public class Trainer {
 	private String trainerPhone;
 	private String trainerLocation;
 	private int costperday;
-	
+	private String technologics;
 	
 }
