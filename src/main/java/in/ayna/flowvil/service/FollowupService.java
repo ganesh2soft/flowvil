@@ -1,5 +1,17 @@
 package in.ayna.flowvil.service;
 
-public interface FollowupService {
+import java.util.List;
 
+import in.ayna.flowvil.entity.Followup;
+
+public interface FollowupService {
+	Followup addFollowup(Followup followup);
+
+    List<Followup> getAllFollowups();
+
+    Followup getFollowupById(Long id);
+
+    Followup updateFollowup(Long id, Followup followup);
+
+    void deleteFollowup(Long id);
 }

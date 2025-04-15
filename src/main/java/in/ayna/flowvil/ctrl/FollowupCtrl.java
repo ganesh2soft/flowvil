@@ -24,28 +24,28 @@ public class FollowupCtrl {
     @Autowired
     private FollowupService followupService;
 
-//    @PostMapping("/add")
-//    public Followup addFollowup(@RequestBody Followup followup) {
-//        return followupService.addFollowup(followup);
-//    }
-//
-//    @GetMapping("/all")
-//    public List<Followup> getAllFollowups() {
-//        return followupService.getAllFollowups();
-//    }
-//
-//    @GetMapping("/{id}")
-//    public Followup getFollowupById(@PathVariable Long id) {
-//        return followupService.getFollowupById(id);
-//    }
-//
-//    @PutMapping("/update/{id}")
-//    public Followup updateFollowup(@PathVariable Long id, @RequestBody Followup followup) {
-//        return followupService.updateFollowup(id, followup);
-//    }
-//
-//    @DeleteMapping("/delete/{id}")
-//    public void deleteFollowup(@PathVariable Long id) {
-//        followupService.deleteFollowup(id);
-//    }
+    @PostMapping("/add")
+    public Followup addFollowup(@RequestBody Followup followup) {
+        return followupService.addFollowup(followup);
+    }
+
+    @GetMapping("/all")
+    public List<Followup> getAllFollowups() {
+        return followupService.getAllFollowups();
+    }
+
+    @GetMapping("/{id}")
+    public Followup getFollowupById(@PathVariable Long id) {
+        return followupService.getFollowupById(id);
+    }
+
+    @PutMapping("/update/{id}")
+    public Followup updateFollowup(@PathVariable Long id, @RequestBody Followup followup) {
+        return followupService.updateFollowup(id, followup);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteFollowup(@PathVariable Long id) {
+        followupService.deleteFollowup(id);
+    }
 }

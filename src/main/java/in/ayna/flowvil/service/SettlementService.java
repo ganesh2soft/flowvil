@@ -3,7 +3,7 @@ package in.ayna.flowvil.service;
 import java.util.List;
 
 import in.ayna.flowvil.entity.Settlement;
-import in.ayna.flowvil.entity.Trainer;
+
 
 public interface SettlementService {
 	Settlement addSettlement(Settlement settlement);

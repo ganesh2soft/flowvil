@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import in.ayna.flowvil.entity.Settlement;
-import in.ayna.flowvil.entity.Trainer;
+
 import in.ayna.flowvil.repo.SettlementRepo;
 
 @Service
