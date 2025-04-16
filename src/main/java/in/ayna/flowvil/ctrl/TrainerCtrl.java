@@ -34,7 +34,7 @@ public class TrainerCtrl {
         return trainerService.getAllTrainers();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Trainer getTrainerById(@PathVariable Long id) {
         return trainerService.getTrainerById(id);
     }

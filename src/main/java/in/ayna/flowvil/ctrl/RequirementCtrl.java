@@ -34,7 +34,7 @@ public class RequirementCtrl {
         return requirementService.getAllRequirements();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Requirement getRequirementById(@PathVariable Long id) {
         return requirementService.getRequirementById(id);
     }

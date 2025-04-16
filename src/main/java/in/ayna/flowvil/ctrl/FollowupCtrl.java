@@ -34,7 +34,7 @@ public class FollowupCtrl {
         return followupService.getAllFollowups();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Followup getFollowupById(@PathVariable Long id) {
         return followupService.getFollowupById(id);
     }

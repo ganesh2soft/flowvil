@@ -34,7 +34,7 @@ public class SettlementCtrl {
         return settlementService.getAllSettlements();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Settlement getSettlementById(@PathVariable Long id) {
         return settlementService.getSettlementById(id);
     }

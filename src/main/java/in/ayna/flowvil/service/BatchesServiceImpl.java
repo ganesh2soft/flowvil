@@ -7,39 +7,39 @@ import org.springframework.stereotype.Service;
 
 import in.ayna.flowvil.entity.Batches;
 import in.ayna.flowvil.repo.BatchesRepo;
+
 @Service
 public class BatchesServiceImpl implements BatchesService {
 
 	@Autowired
-    private BatchesRepo batchesRepo;
-//	@Override
-//	public void addBatches(Batches batch) {
-//		batchesRepo.save(batch);
-//		
-//	}
+	private BatchesRepo batchesRepo;
+
+	@Override
+	public Batches addBatches(Batches batch) {
+		return batchesRepo.save(batch);
+	}
 
 	@Override
 	public List<Batches> getAllBatches() {
 		// TODO Auto-generated method stub
-		 return batchesRepo.findAll();
+		return batchesRepo.findAll();
 	}
 
 	@Override
 	public Batches getBatchesById(Long id) {
-	    return batchesRepo.findById(id).orElse(null);
+		return batchesRepo.findById(id).orElse(null);
 	}
 
-//	@Override
-//	public void updateBatches(Long id, Batches batch) {
-//		 batch.setbatchesId(id); // make sure Batches has setId()
-//	        batchesRepo.save(batch);
-//		
-//	}
+	@Override
+	public Batches updateBatch(Long id, Batches batch) {
+		batch.setBatchId(id); // make sure Batches has setId()
+		return batchesRepo.save(batch);
 
+	}
 	@Override
 	public void deleteBatches(Long id) {
 		// TODO Auto-generated method stub
 		batchesRepo.deleteById(id);
 	}
-	
+
 }

@@ -24,25 +24,26 @@ public class BatchesCtrl {
     @Autowired
     private BatchesService batchesService;
 
-//    @PostMapping("/add")
-//    public Batches addBatches(@RequestBody Batches batch) {
-//        return batchesService.addBatches(batch);
-//    }
+    @PostMapping("/add")
+    public Batches addBatches(@RequestBody Batches batches) {
+        return batchesService.addBatches(batches);
+    }
 
     @GetMapping("/all")
     public List<Batches> getAllBatches() {
         return batchesService.getAllBatches();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Batches getBatchById(@PathVariable Long id) {
         return batchesService.getBatchesById(id);
     }
 
 //    @PutMapping("/update/{id}")
-//    public Batches updateBatch(@PathVariable Long id, @RequestBody Batches batch) {
-//        return batchesService.updateBatches(id, batch);
+//    public Batches updateBatches(@PathVariable Long id, @RequestBody Batches batch) {
+//        Batches batchesService.updateBatch(id, batch);
 //    }
+
 
     @DeleteMapping("/delete/{id}")
     public void deleteBatch(@PathVariable Long id) {

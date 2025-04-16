@@ -8,6 +8,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "batchestbl")
@@ -18,8 +20,12 @@ public class Batches {
 	private String batchVenue;
 	private String trainingMode;
 	private int batchDuration; //No of days
+	@Temporal(TemporalType.DATE)
 	private Date batchStartDate;
+
+	@Temporal(TemporalType.DATE)
 	private Date batchEndDate;
+
     private String batchName;
     private String trainingFor;
     private String locationContactPerson;

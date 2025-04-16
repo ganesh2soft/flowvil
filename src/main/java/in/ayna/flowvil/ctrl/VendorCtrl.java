@@ -34,7 +34,7 @@ public class VendorCtrl {
         return vendorService.getAllVendors();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Vendor getVendorById(@PathVariable Long id) {
         return vendorService.getVendorById(id);
     }
